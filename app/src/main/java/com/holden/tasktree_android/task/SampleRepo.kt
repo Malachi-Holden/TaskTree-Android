@@ -19,6 +19,7 @@ class SampleRepo: TaskRepository {
     }
 
     override suspend fun updateTask(task: Task): TaskUpdateResult {
+        delay(DELAY)
         return if (tasks.containsKey(task.id)) {
             tasks[task.id] = task
             TaskUpdateResult.Success
@@ -28,12 +29,14 @@ class SampleRepo: TaskRepository {
     }
 
     override suspend fun createParentTask(task: Task): TaskUpdateResult {
+        delay(DELAY)
         tasks[task.id] = task
         parentTasks.add(task.id)
         return TaskUpdateResult.Success
     }
 
     override suspend fun createSubTask(parentId: String, task: Task): TaskUpdateResult {
+        delay(DELAY)
         tasks[task.id] = task
         tasks[parentId]?.let {  parent ->
             tasks[parentId] = parent.copy(
