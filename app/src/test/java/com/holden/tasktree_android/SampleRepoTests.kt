@@ -1,9 +1,9 @@
 package com.holden.tasktree_android
 
-import com.holden.tasktree_android.task.SampleRepo
+import com.holden.tasktree_android.repo.SampleRepo
 import com.holden.tasktree_android.task.Task
-import com.holden.tasktree_android.task.TaskListResult
-import com.holden.tasktree_android.task.TaskUpdateResult
+import com.holden.tasktree_android.repo.TaskListResult
+import com.holden.tasktree_android.repo.TaskUpdateResult
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test

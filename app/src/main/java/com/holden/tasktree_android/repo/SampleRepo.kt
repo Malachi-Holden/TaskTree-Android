@@ -1,5 +1,6 @@
-package com.holden.tasktree_android.task
+package com.holden.tasktree_android.repo
 
+import com.holden.tasktree_android.task.Task
 import kotlinx.coroutines.delay
 
 class SampleRepo: TaskRepository {

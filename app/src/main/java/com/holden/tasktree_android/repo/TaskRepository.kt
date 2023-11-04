@@ -1,4 +1,6 @@
-package com.holden.tasktree_android.task
+package com.holden.tasktree_android.repo
+
+import com.holden.tasktree_android.task.Task
 
 interface TaskRepository {
     suspend fun getParentTasks(): TaskListResult
